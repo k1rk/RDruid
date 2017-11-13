@@ -26,8 +26,8 @@
 #'
 #' @return The URL for the druid endpoint
 #' @export
-druid.url <- function(host = "localhost", port = 8082) {
-    return (paste("http://", host, ":", port, "/druid/v2/", sep=""))
+druid.url <- function(host = "localhost", port = 8082, protocol = "http") {
+    return (paste(protocol, "://", host, ":", port, "/druid/v2/", sep=""))
 }
 
 #' Converts JSON from Druid into a data frame
